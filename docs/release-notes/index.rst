@@ -3,9 +3,9 @@
 Release notes
 =============
 
-This page lists past release notes for Starcraft, summarising new features, bug
+This page lists past release notes for Craft Artifacts, summarising new features, bug
 fixes and backwards-incompatible changes in each version. It also contains the
-release and support policies for Starcraft.
+release and support policies for Craft Artifacts.
 
 
 Current releases
@@ -50,13 +50,13 @@ Release policy and schedule
 ---------------------------
 
 Canonical is committed to supporting the <"latest major release" or "last two
-major releases"> of Starcraft. <Optional: "We forward-port changes in older
+major releases"> of Craft Artifacts. <Optional: "We forward-port changes in older
 releases to the latest release, if they're compatible.">
 
-Starcraft is released when it achieves development milestones in its product
+Craft Artifacts is released when it achieves development milestones in its product
 lifecycle. It doesn't follow a predefined release cadence.
 
-Starcraft release naming follows the Semantic Versioning 2.0.0 scheme with
+Craft Artifacts release naming follows the Semantic Versioning 2.0.0 scheme with
 numbers for major, minor, and patch versions.
 
 .. list-table::
@@ -82,11 +82,11 @@ numbers for major, minor, and patch versions.
 Long-term support
 -----------------
 
-Starcraft doesn't have long-term support (LTS) releases. However, we typically
+Craft Artifacts doesn't have long-term support (LTS) releases. However, we typically
 deliver a compatibility release shortly after Ubuntu LTS releases to ensure
 continuity.
 
-Starcraft software bases are derived from Ubuntu LTS releases, and their
+Craft Artifacts software bases are derived from Ubuntu LTS releases, and their
 development keeps pace with the OS's new releases and support lifecycle.
 
 .. toctree::
@@ -95,33 +95,33 @@ development keeps pace with the OS's new releases and support lifecycle.
 
 .. release note template:
 
-  Starcraft 1.0 release notes
-  ===========================
+  Craft Artifacts 1.0 release notes
+  =================================
 
   15 October 2024
 
-  Learn about the new features, changes, and fixes introduced in Starcraft 1.0.
-  For information about the Starcraft release cycle, see the
+  Learn about the new features, changes, and fixes introduced in Craft Artifacts 1.0.
+  For information about the Craft Artifacts release cycle, see the
   :ref:`release_policy_and_schedule`.
 
 
   Requirements and compatibility
   ------------------------------
 
-  Starcraft 1.0 requires Python 3.11 or higher.
+  Craft Artifacts 1.0 requires Python 3.11 or higher.
 
   <If there are multiple requirements, remove "Python 3.11 or higher" in the
   previous paragraph and add a separate list here, with the same format of
   "<package> or higher".>
 
-  For development and testing, Starcraft requires a <architecture> system or VM
+  For development and testing, Craft Artifacts requires a <architecture> system or VM
   with a minimum of <number>GB RAM.
 
 
   What's new
   ----------
 
-  Starcraft 1.0 brings the following features, integrations, and improvements.
+  Craft Artifacts 1.0 brings the following features, integrations, and improvements.
 
 
   <Important change>
@@ -161,7 +161,7 @@ development keeps pace with the OS's new releases and support lifecycle.
   declare ``voting: false`` to disable voting".>
 
   <Paragraph 3, optional: Provide a call to action. This could take several
-  forms, such as a call to immediately perform a relevant action in Starcraft,
+  forms, such as a call to immediately perform a relevant action in Craft Artifacts,
   solicititation of the reader's feedback on a form or forum, or a link to
   documentation, demo, blog post, and so on. For example, "See ``:ref:`Manage
   store profile``` to configure how the public can engage with your snap on the
@@ -171,7 +171,7 @@ development keeps pace with the OS's new releases and support lifecycle.
   Minor features
   --------------
 
-  Starcraft 1.0 brings the following minor changes.
+  Craft Artifacts 1.0 brings the following minor changes.
 
 
   <Feature x>
@@ -183,10 +183,10 @@ development keeps pace with the OS's new releases and support lifecycle.
   ``method()`` more descriptive and recommend a likely remedy.">
 
 
-  Backwards-incompatible changes in Starcraft 1.0
+  Backwards-incompatible changes in Craft Artifacts 1.0
   -----------------------------------------------
 
-  The following changes are incompatible with previous versions of Starcraft.
+  The following changes are incompatible with previous versions of Craft Artifacts.
 
 
   <"Removed" or "Disabled"> <feature y>
@@ -201,18 +201,18 @@ development keeps pace with the OS's new releases and support lifecycle.
   alternative solution, or state if no alternative exists. If necessary,
   describe the consequences of the reader's inaction. Link to relevant
   documentation, standards, or public discussion. For example, "In accordance
-  with the report, Starcraft 1.0 no longer supports encryption algorithm X. As
+  with the report, Craft Artifacts 1.0 no longer supports encryption algorithm X. As
   of this release, if you haven't already we highly recommend you immediately
   switch to encryption algorithm Y to ensure your data stays protected. For
   more details about this decision and our policy, see ```Security notice on
   encryption X <>`_`` on the Ubuntu blog.">
 
 
-  Deprecated features in Starcraft 1.0
-  ------------------------------------
+  Deprecated features in Craft Artifacts 1.0
+  ------------------------------------------
 
-  The following features should no longer be used in Starcraft 1.0, and will be
-  removed in Starcraft 1.1.
+  The following features should no longer be used in Craft Artifacts 1.0, and will be
+  removed in Craft Artifacts 1.1.
 
 
   Deprecated <feature z>
@@ -229,7 +229,7 @@ development keeps pace with the OS's new releases and support lifecycle.
   public discussion. For example, "In October 2024, the NIST published SP
   ABC-123, urging software publishers to cease the use of encryption algorithm
   X. We are deprecating its usage in this release, and plan to remove it in
-  Starcraft 1.1. For more details about this decision and our policy, see
+  Craft Artifacts 1.1. For more details about this decision and our policy, see
   ```Security notice on encryption X <>`_`` on the Ubuntu blog.">
 
 
@@ -248,7 +248,7 @@ development keeps pace with the OS's new releases and support lifecycle.
   Fixed bugs and issues
   ---------------------
 
-  The following issues have been resolved in Starcraft 1.0:
+  The following issues have been resolved in Craft Artifacts 1.0:
 
   - <Ticket ID> <Title>
   - <Ticket ID> <Title>
@@ -260,4 +260,3 @@ development keeps pace with the OS's new releases and support lifecycle.
   We would like to share a big thank you to all the people who contributed to this release.
 
   `@alex <>`_, `@blair <>`_, `@cam <>`_, `@devin <>`_
-

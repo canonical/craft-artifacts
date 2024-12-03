@@ -1,4 +1,4 @@
-PROJECT=starcraft
+PROJECT=craft_artifacts
 
 include common.mk
 

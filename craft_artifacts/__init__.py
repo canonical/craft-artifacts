@@ -1,4 +1,4 @@
-# This file is part of starcraft.
+# This file is part of craft-artifacts.
 #
 # Copyright 2023 Canonical Ltd.
 #
@@ -13,7 +13,7 @@
 #
 # You should have received a copy of the GNU General Public License along
 # with this program.  If not, see <http://www.gnu.org/licenses/>.
-"""Starcraft package demo."""
+"""Craft Artifacts package demo."""
 
 from typing import Any
 
@@ -23,7 +23,7 @@ except ImportError:  # pragma: no cover
     from importlib.metadata import version, PackageNotFoundError
 
     try:
-        __version__ = version("starcraft")
+        __version__ = version("craft-artifacts")
     except PackageNotFoundError:
         __version__ = "dev"
 

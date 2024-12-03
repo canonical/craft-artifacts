@@ -1470,7 +1470,7 @@ wheels = [
 ]
 
 [[package]]
-name = "starcraft"
+name = "craft-artifacts"
 version = "0.0.post250+ga411e24.d20241118"
 source = { editable = "." }
 
