@@ -72,3 +72,7 @@ github_username = "canonical"
 github_repository = "craft-artifacts"
 
 # endregion
+
+exclude_patterns = [
+    "release-notes/index.rst",
+]
