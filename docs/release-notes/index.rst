@@ -208,11 +208,11 @@ development keeps pace with the OS's new releases and support lifecycle.
   encryption X <>`_`` on the Ubuntu blog.">
 
 
-  Deprecated features in Craft Artifacts 1.0
-  ------------------------------------------
+  Upcoming deprecations as of Craft Artifacts 1.0
+  -----------------------------------------------
 
   The following features should no longer be used in Craft Artifacts 1.0, and will be
-  removed in Craft Artifacts 1.1.
+  removed in Craft Artifacts 2.0.
 
 
   Deprecated <feature z>
