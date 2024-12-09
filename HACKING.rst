@@ -1,8 +1,8 @@
-*********
-Starcraft
-*********
+***************
+Craft Artifacts
+***************
 
-Welcome to Starcraft! We hope this document helps you get started. Before
+Welcome to Craft Artifacts! We hope this document helps you get started. Before
 contributing any code, please sign the `Canonical contributor licence
 agreement`_.
 
@@ -44,7 +44,7 @@ of tests can be run with other testing targets shown in ``make help``.
 Branches
 --------
 
-Starcraft projects follow the `OneFlow`_ git branching model.
+Craft Artifacts projects follow the `OneFlow`_ git branching model.
 
 
 Branch names

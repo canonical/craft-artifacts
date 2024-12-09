@@ -1,4 +1,4 @@
-# This file is part of starcraft.
+# This file is part of craft-artifacts.
 #
 # Copyright 2023 Canonical Ltd.
 #
@@ -13,22 +13,22 @@
 #
 # You should have received a copy of the GNU General Public License along
 # with this program.  If not, see <http://www.gnu.org/licenses/>.
-"""Basic Starcraft package demo unit tests."""
+"""Basic Craft Artifacts package demo unit tests."""
 
 # pyright: reportFunctionMemberAccess=false
 from unittest import mock
 
-import starcraft
+import craft_artifacts
 
 
 def test_version():
-    assert starcraft.__version__ is not None
+    assert craft_artifacts.__version__ is not None
 
 
 def test_hello(mocker):
     mocker.patch("builtins.print")
 
-    starcraft.hello()
+    craft_artifacts.hello()
 
     print.assert_called_once_with("Hello *craft team!")
 
@@ -36,7 +36,7 @@ def test_hello(mocker):
 def test_hello_people(mocker):
     mocker.patch("builtins.print")
 
-    starcraft.hello(["people"])
+    craft_artifacts.hello(["people"])
 
     print.assert_has_calls(
         [
