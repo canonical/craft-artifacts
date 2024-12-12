@@ -1,6 +1,6 @@
 # This file is part of craft-artifacts.
 #
-# Copyright 2023 Canonical Ltd.
+# Copyright 2024 Canonical Ltd.
 #
 # This program is free software: you can redistribute it and/or modify it
 # under the terms of the GNU General Public License version 3, as published
@@ -13,9 +13,15 @@
 #
 # You should have received a copy of the GNU General Public License along
 # with this program.  If not, see <http://www.gnu.org/licenses/>.
-"""Craft Artifacts package demo."""
 
-from typing import Any
+"""Artifacts packing."""
+
+from ._artifacts import (
+    Artifacts,
+    BaseArtifact,
+    BaseArtifactInputDirs,
+)
+from ._tar import TarArtifact, TarCompression
 
 try:
     from ._version import __version__
@@ -27,15 +33,11 @@ except ImportError:  # pragma: no cover
     except PackageNotFoundError:
         __version__ = "dev"
 
-
-def hello(people: list[Any] | None = None) -> None:
-    """Says hello."""
-    print("Hello *craft team!")
-    if people:
-        for person in people:
-            print(f"Hello {person}!")
-
-
 __all__ = [
     "__version__",
+    "Artifacts",
+    "BaseArtifact",
+    "BaseArtifactInputDirs",
+    "TarArtifact",
+    "TarCompression",
 ]
