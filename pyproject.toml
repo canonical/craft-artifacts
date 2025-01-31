@@ -20,7 +20,7 @@ requires-python = ">=3.10"
 lint = ["yamllint~=1.34"]
 types = [
     "mypy[reports]~=1.14.1",
-    "pyright==1.1.391",
+    "pyright==1.1.393",
     "types-Pygments",
     "types-colorama",
     "types-setuptools",
@@ -58,7 +58,7 @@ dev-dependencies = [
     "pytest-mock~=3.12",
     "yamllint~=1.34",
     "mypy[reports]~=1.14.1",
-    "pyright==1.1.391",
+    "pyright==1.1.393",
     "types-Pygments",
     "types-colorama",
     "types-setuptools",
