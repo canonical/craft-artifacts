@@ -1,75 +1,83 @@
 [project]
 name = "craft-artifacts"
 description = "The basis for Craft Artifacts team packages"
-dynamic = ["version", "readme"]
+dynamic = ["version"]
 dependencies = [
     "pydantic>=2.0.0,<3.0.0",
 ]
 classifiers = [
     "Development Status :: 1 - Planning",
-    "License :: OSI Approved :: GNU General Public License (GPL)",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.12",
 ]
+license = "GPL-3.0"
 requires-python = ">=3.10"
+readme = { file = "README.md", content-type = "text/markdown" }
 
 [project.scripts]
 
-[project.optional-dependencies]
-lint = ["yamllint~=1.34"]
+[dependency-groups]
+lint = [
+    # Left empty for scaffolding and Makefile compatibility
+]
 types = [
-    "mypy[reports]~=1.14.1",
-    "pyright==1.1.393",
+    "mypy[reports]~=1.15.0",
     "types-Pygments",
     "types-colorama",
     "types-setuptools",
 ]
 docs = [
-    "canonical-sphinx~=0.3.0",
+    "canonical-sphinx~=0.4.0",
     "sphinx-autobuild~=2024.2",
     "sphinx-pydantic==0.1.1",
     "sphinx-toolbox~=3.5",
-    "sphinx-lint==1.0.0",
+    "sphinx-lint~=1.0",
+    "sphinxext-rediraffe==0.2.7",
 ]
-
-[tool.uv]
-constraint-dependencies = [
-    # Basic constraints to allow --resolution=lowest
+dev = [
     "build>=0.7.0",
-    "iniconfig>=1.1.0",
-    "lxml>=5.0",
-    "pyparsing>=3.0.0",
-    "pyproject-hooks>=1.0.0",
-    "pyyaml>=5.0",
-    "markdown>=3.0",
-    "markupsafe>=2.0",
-    "pyyaml>5.0",
-    "regex>=2021.11.10",
-    "sphinx-basic-ng>=1.0.0b1",
-    "tornado>=4.0",
-    "webencodings>=0.4.0",
-]
-dev-dependencies = [
-    "build",
     "coverage[toml]~=7.4",
     "pytest~=8.0",
     "pytest-cov~=6.0",
     "pytest-mock~=3.12",
-    "yamllint~=1.34",
-    "mypy[reports]~=1.14.1",
-    "pyright==1.1.393",
+    "mypy[reports]~=1.15.0",
     "types-Pygments",
     "types-colorama",
     "types-setuptools",
 ]
+tics = ["flake8", "pylint"]
+
+[tool.uv]
+constraint-dependencies = [
+    # Basic constraints to allow --resolution=lowest
+    "cffi>=1.15",
+    "iniconfig>=1.1.0",
+    "httplib2>=0.20.0",
+    "libnacl>=2.0",
+    "lxml>=5.0",
+    "markdown>=3.0",
+    "markupsafe>=2.0",
+    "oauthlib>=3.0.0",
+    "protobuf>=5.0",
+    "pynacl>=1.5",
+    "pyparsing>=3.0.0",
+    "pyproject-hooks>=1.0.0",
+    "pytz>=2020",
+    "pyyaml>=5.0",
+    "regex>=2021.11.10",
+    "setuptools>=50",
+    "sphinx-basic-ng>=1.0.0b1",
+    "tornado>=4.0",
+    "urllib3>=2.0",
+    "webencodings>=0.4.0",
+    "wheel>=0.38",
+]
+
 
 [build-system]
 requires = ["setuptools>=69.0", "setuptools_scm[toml]>=7.1"]
 build-backend = "setuptools.build_meta"
-
-[tool.setuptools.dynamic]
-readme = { file = "README.rst" }
 
 [tool.setuptools_scm]
 write_to = "craft_artifacts/_version.py"
@@ -86,14 +94,20 @@ version_scheme = "post-release"
 # deviations from the default 'git describe' command:
 # - only match annotated tags
 # - only match tags formatted as 'X.Y.Z'
-git_describe_command = "git describe --dirty --long --match '[0-9]*.[0-9]*.[0-9]*' --exclude '*[^0-9.]*'"
+git_describe_command = [
+    "git",
+    "describe",
+    "--dirty",
+    "--long",
+    "--match",
+    "[0-9]*.[0-9]*.[0-9]*",
+    "--exclude",
+    "*[^0-9.]*",
+]
 
 [tool.setuptools.packages.find]
 include = ["*craft*"]
 namespaces = false
-
-[tool.black]
-target-version = ["py310"]
 
 [tool.codespell]
 ignore-words-list = "buildd,crate,keyserver,comandos,ro,dedent,dedented"
@@ -113,6 +127,7 @@ line_length = 88
 minversion = "7.0"
 testpaths = "tests"
 xfail_strict = true
+addopts = "--ignore=tests/spread"
 markers = ["slow: slow tests"]
 
 [tool.coverage.run]
@@ -273,6 +288,9 @@ ignore = [
 
 [tool.ruff.lint.flake8-annotations]
 allow-star-arg-any = true
+
+[tool.ruff.lint.flake8-builtins]
+strict-checking = true
 
 [tool.ruff.lint.pydocstyle]
 ignore-decorators = [ # Functions with these decorators don't have to have docstrings.
