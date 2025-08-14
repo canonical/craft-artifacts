@@ -31,6 +31,11 @@ html_context = {
     "github_url": "https://github.com/canonical/craft-artifacts",
 }
 
+# Target repository for the edit button on pages
+html_theme_options = {
+    "source_edit_link": "https://github.com/canonical/craft-artifacts",
+}
+
 extensions = [
     "canonical_sphinx",
 ]
@@ -49,6 +54,7 @@ extensions.extend(
         "sphinx_toolbox",
         "sphinx_toolbox.more_autodoc",
         "sphinx.ext.autodoc",  # Must be loaded after more_autodoc
+        "sphinxext.rediraffe",
     ]
 )
 
@@ -76,3 +82,6 @@ github_repository = "craft-artifacts"
 exclude_patterns = [
     "release-notes/index.rst",
 ]
+
+# Client-side page redirects.
+rediraffe_redirects = "redirects.txt"
