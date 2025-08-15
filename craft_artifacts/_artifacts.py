@@ -41,7 +41,7 @@ class BaseArtifact(metaclass=abc.ABCMeta):
 
     input_dirs: BaseArtifactInputDirs
     name: str
-    outputs: list[Path] = field(init=False, default_factory=list)
+    outputs: list[Path] = field(init=False, default_factory=list[Path])
     work_dir: Path = Path.cwd()
     keep: bool = False
 
@@ -76,7 +76,7 @@ class BaseArtifact(metaclass=abc.ABCMeta):
 class Artifacts(BaseModel):
     """Collection of artifacts to pack."""
 
-    _artifacts: set[BaseArtifact] = PrivateAttr(default_factory=set)
+    _artifacts: set[BaseArtifact] = PrivateAttr(default_factory=set[BaseArtifact])
     dest: Path
 
     def add(self, artifacts: list[BaseArtifact]) -> None:

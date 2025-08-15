@@ -19,6 +19,7 @@
 import enum
 import tarfile
 from dataclasses import dataclass
+from typing import Literal, cast
 
 from craft_artifacts import BaseArtifact
 
@@ -45,9 +46,14 @@ class TarArtifact(BaseArtifact):
         compression_suffix = ""
         if self.compression.value:
             compression_suffix = f".{self.compression.value}"
+            mode = cast(
+                Literal["w:", "w:xz", "w:gz", "w:bz2"], f"w:{self.compression.value}"
+            )
+        else:
+            mode = "w:"
         filename = f"{self.name}{self.suffix}{compression_suffix}"
         dest = self.work_dir / filename
-        with tarfile.open(dest, mode="w:" + self.compression.value) as tar:
+        with tarfile.open(dest, mode=mode) as tar:
             tar.add(self.input_dirs.default_prime_dir, arcname=".", recursive=True)
 
         self.outputs = [dest]
