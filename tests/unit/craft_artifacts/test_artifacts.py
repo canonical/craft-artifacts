@@ -33,7 +33,7 @@ class NoOpArtifact(BaseArtifact):
 def test_base_artifact_input_dirs_init():
     expected = "missing 1 required positional argument: 'default_prime_dir'"
     with pytest.raises(TypeError, match=expected):
-        BaseArtifactInputDirs()  # pyright: ignore[reportCallIssue]
+        BaseArtifactInputDirs()  # pyright: ignore[reportCallIssue] # ty: ignore[missing-argument]
 
 
 def test_child_artifact_init():
@@ -44,7 +44,7 @@ def test_child_artifact_init():
     expected = "missing 2 required positional arguments: 'input_dirs' and 'name'"
 
     with pytest.raises(TypeError, match=expected):
-        ExampleArtifact()  # pyright: ignore[reportAbstractUsage, reportCallIssue]
+        ExampleArtifact()  # pyright: ignore[reportAbstractUsage, reportCallIssue] # ty: ignore[missing-argument]
 
 
 def test_base_artifact_faulty_artifact():
