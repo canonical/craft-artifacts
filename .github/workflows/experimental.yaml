@@ -2,6 +2,9 @@ name: Experimental workflows
 on:
   pull_request:
 
+permissions:
+  issues: write # Allow adding comments to issues.
+
 jobs:
   typecheck-with-ty:
     runs-on: ubuntu-latest
@@ -9,6 +12,7 @@ jobs:
       - name: Install ty
         id: snap-install
         run: |
+          sudo snap install --no-wait --edge core26
           echo -n jobs="$(sudo snap install --no-wait --edge astral-ty)" >> $GITHUB_OUTPUT
       - name: Check out code
         uses: actions/checkout@v6
