@@ -20,7 +20,7 @@ import abc
 import shutil
 from dataclasses import dataclass, field
 from pathlib import Path
-from typing import cast, final
+from typing import final
 
 from pydantic import BaseModel, PrivateAttr
 
@@ -50,7 +50,7 @@ class BaseArtifact(metaclass=abc.ABCMeta):
 
     def __eq__(self, other: object) -> bool:
         if type(other) is type(self):
-            return self.name == cast(BaseArtifact, other).name
+            return self.name == other.name
 
         return False
 
