@@ -27,5 +27,5 @@ jobs:
   test-resolute:
     uses: canonical/starflow/.github/workflows/test-python.yaml@main
     with:
-      fast-test-platforms: '[["self-hosted-linux-amd64-resolute-large"]]'
+      fast-test-platforms: '["self-hosted-linux-amd64-resolute-large"]'
       fast-test-python-versions: '["3.14"]'
