@@ -21,3 +21,4 @@ jobs:
     uses: canonical/starflow/.github/workflows/test-python.yaml@main
     with:
       fast-test-platforms: '["ubuntu-22.04", "ubuntu-24.04", "ubuntu-24.04-arm", "windows-latest", "macos-latest"]'
+      use-lxd: false
